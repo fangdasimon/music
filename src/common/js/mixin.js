@@ -77,11 +77,11 @@ export const playModeMixin={
                 return 'icon-not-favorite'
             }
         },
-        toggleFavorite(){
-            if(this.isFavorite(this.currentSong)) {
-                this.deleteFavoriteHistory(this.currentSong)
+        toggleFavorite(song){
+            if(this.isFavorite(song)) {
+                this.deleteFavoriteHistory(song)
             }else{
-                this.saveFavoriteHistory(this.currentSong)
+                this.saveFavoriteHistory(song)
             }
         },
         isFavorite(song){

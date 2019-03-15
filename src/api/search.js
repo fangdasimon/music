@@ -9,6 +9,8 @@ import {commonParams,options} from './config'
 import axios from 'axios'
 
 const debug=process.env.NODE_ENV !== 'production'
+// const debug = true
+
 
 export function gethotkey(){
     const url="https://c.y.qq.com/splcloud/fcgi-bin/gethotkey.fcg"
@@ -20,6 +22,7 @@ export function gethotkey(){
 }
 export function search(query,page,zhida,perpage) {
     // const url="https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp"
+    // 如果不代理到9000端口会有跨域问题
     const url = debug ? '/api/search' : 'http://www.damonstore.cn/music/api/search'
     const data=Object.assign({},commonParams,{
         w:query,

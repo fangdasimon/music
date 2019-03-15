@@ -10,6 +10,7 @@ import { getUid } from 'common/js/uid'
 import axios from 'axios'
 
 const debug = process.env.NODE_ENV !== 'production'
+// const debug = true
 
 export function getLyric(mid) {
   const url = debug ? '/api/lyric' : 'http://www.damonstore.cn/music/api/lyric'
